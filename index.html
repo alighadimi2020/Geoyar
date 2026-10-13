@@ -1,1145 +1,845 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#10110f">
-
-    <title>GEOYAR | دستیار هوشمند بهینه‌سازی برای موتورهای مولد</title>
-
-    <meta
-        name="description"
-        content="GEOYAR؛ افزونه وردپرس برای بررسی و بهبود آمادگی سایت جهت دیده‌شدن در پاسخ‌های موتورهای جست‌وجوی مولد و هوش مصنوعی."
-    >
-
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet"
-    >
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دموی GEOYAR</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <main class="gy-root">
+    <div class="gy-app" dir="rtl" data-font="md" data-density="comfortable">
 
-    <div class="site-shell">
+      <header class="gy-top">
+        <div class="gy-brand">
+          <span class="gy-brand-mark">
+            <svg class="gy-logo" height="28" viewBox="0 0 510 322" fill="currentColor">
+              <path d="M388.9 317 L389.4 195 L495.2 22 L505.2 4 L462 3.9 L451.3 7 L444.3 12 L436 23.4 L363 144.1 L301 44.3 L290 28 L272 12 L244 3.7 L155 3.8 L91 19 L45 52 L14 101 L3 164 L14 221 L45 271 L91 303 L147 317 L203 314 L259 293 L280 276 L282 171 L264 145 L251 142 L158 143 L158 189 L228 191 L228 249 L194 263 L150 266 L114 254 L83 229 L63 189 L60 156 L71 110 L99 77 L131 60 L165 55 L230 55 L253 67 L334 196 L334 317Z"/>
+            </svg>
+          </span>
+          <span class="gy-brand-name">GEOYAR</span>
+        </div>
 
-        <header class="site-header">
-            <div class="container header-inner">
+<nav class="gy-tabs" aria-label="بخش‌های GEOYAR">
+  <button class="gy-tab is-active" data-page="dashboard">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <rect width="7" height="9" x="3" y="3" rx="1"/>
+      <rect width="7" height="5" x="14" y="3" rx="1"/>
+      <rect width="7" height="9" x="14" y="12" rx="1"/>
+      <rect width="7" height="5" x="3" y="16" rx="1"/>
+    </svg>
+    <span>داشبورد</span>
+  </button>
 
-                <a href="#" class="brand" aria-label="GEOYAR">
-                    <span class="brand-mark">G</span>
-                    <span class="brand-name">GEO<span>YAR</span></span>
-                </a>
+  <button class="gy-tab" data-page="connections">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 17H7A5 5 0 0 1 7 7h2"/>
+      <path d="M15 7h2a5 5 0 1 1 0 10h-2"/>
+      <line x1="8" x2="16" y1="12" y2="12"/>
+    </svg>
+    <span>اتصالات</span>
+  </button>
 
-                <nav class="main-nav" aria-label="منوی اصلی">
-                    <a href="#features">قابلیت‌ها</a>
-                    <a href="#workflow">نحوه عملکرد</a>
-                    <a href="#dashboard">محیط افزونه</a>
-                    <a href="#faq">سؤالات متداول</a>
-                </nav>
+  <button class="gy-tab" data-page="content-gaps">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 20h9"/>
+      <path d="M16.376 3.622a1 1 0 0 1 3.002 3.002L7.368 18.635a2 2 0 0 1-.855.506l-2.872.838a.5.5 0 0 1-.62-.62l.838-2.872a2 2 0 0 1 .506-.854z"/>
+    </svg>
+    <span>خلأ محتوایی</span>
+  </button>
 
-                <a href="#purchase" class="header-cta">
-                    مشاهده و خرید
-                    <span aria-hidden="true">↗</span>
-                </a>
+  <button class="gy-tab" data-page="actions">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M8 6h13"/>
+      <path d="M8 12h13"/>
+      <path d="M8 18h13"/>
+      <path d="M3 6h.01"/>
+      <path d="M3 12h.01"/>
+      <path d="M3 18h.01"/>
+    </svg>
+    <span>مرکز اقدامات</span>
+  </button>
 
-                <button
-                    class="mobile-menu-button"
-                    type="button"
-                    aria-label="منوی موبایل"
-                    aria-expanded="false"
-                >
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+  <button class="gy-tab" data-page="settings">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <span>تنظیمات</span>
+  </button>
+</nav>
+      </header>
 
+      <div class="demo-note">
+        نسخه نمایشی GEOYAR — اعداد و گزارش‌ها نمونه‌اند؛ اتصال به سرویس‌ها یا بررسی واقعی سایت انجام نمی‌شود.
+      </div>
+
+      <section class="gy-page is-visible" id="page-dashboard">
+
+        <div class="gy-pagehead">
+          <div class="gy-pagehead-text">
+            <div>
+              <h2>داشبورد</h2>
+              <p>نمای کلی وضعیت سایت و بازخورد مدل‌های هوش مصنوعی</p>
             </div>
-        </header>
+          </div>
+          <div class="gy-pagehead-actions">
+            <button class="gy-btn gy-btn-primary" data-scan>  بررسی مجدد سایت </button>
+          </div>
+        </div>
 
-        <main>
+        <div id="progress" class="gy-progress" hidden>
+          <div class="gy-progress-head">
+            <strong id="progress-text">در حال بررسی نمایشی…</strong>
+            <span id="progress-pct">۰٪</span>
+          </div>
+          <div class="gy-progress-track">
+            <div id="progress-bar"></div>
+          </div>
+        </div>
 
-            <section class="hero-section">
-                <div class="hero-glow hero-glow-one"></div>
-                <div class="hero-glow hero-glow-two"></div>
+        <!-- Traffic cards -->
+<section class="gy-traffic-grid">
+  <article class="gy-card gy-traffic-card">
+    <span class="gy-traffic-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 8V4H8"/>
+        <rect width="16" height="12" x="4" y="8" rx="2"/>
+        <path d="M2 14h2"/>
+        <path d="M20 14h2"/>
+        <path d="M15 13v2"/>
+        <path d="M9 13v2"/>
+      </svg>
+    </span>
+    <div>
+      <p>بازدید ربات‌های هوش مصنوعی</p>
+      <strong>۱٬۲۸۴</strong>
+      <small>تعداد درخواست‌های شناسایی‌شده</small>
+    </div>
+  </article>
 
-                <div class="container hero-grid">
+  <article class="gy-card gy-traffic-card">
+    <span class="gy-traffic-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+        <circle cx="9" cy="7" r="4"/>
+        <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
+        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+      </svg>
+    </span>
+    <div>
+      <p>بازدید افراد از طریق هوش مصنوعی</p>
+      <strong>۳۶۸</strong>
+      <small>نشست‌های ارجاع‌شده</small>
+    </div>
+  </article>
+</section>
 
-                    <div class="hero-content">
+        <!-- Schedule -->
+        <section class="gy-card gy-schedule">
+          <div class="gy-schedule-text">
+            <h3>زمان‌بندی نظر هوش مصنوعی</h3>
+            <p>
+              نظر مدل‌های هوش مصنوعی ماهی یک‌بار به‌صورت خودکار دریافت می‌شود.
+              بررسی کامل سایت جداست و هر زمان خواستید اجرا می‌شود.
+            </p>
+          </div>
+          <div class="gy-seg gy-seg-fixed">
+            <span class="is-on">هر ماه</span>
+          </div>
+          <div class="gy-schedule-meta">
+            <span>نظر بعدی</span>
+            <strong>۱۲ آبان ۱۴۰۵</strong>
+          </div>
+        </section>
 
-                        <div class="eyebrow">
-                            <span class="status-dot"></span>
-                            نسل جدید بهینه‌سازی سایت
-                        </div>
+        <!-- AI model cards -->
+        <section class="gy-ai-grid">
+          <article class="gy-card gy-ai">
+            <header class="gy-ai-head">
+              <div class="gy-ai-name"><h3>ChatGPT</h3></div>
+              <span class="gy-pill is-ok">متصل</span>
+            </header>
+            <div class="gy-ai-body">
+              <strong class="gy-ai-answer-title">پاسخ هوش مصنوعی برای کاربر</strong>
+              <p class="gy-ai-text">
+                این وب‌سایت ساختار محتوایی مناسبی دارد؛ با تکمیل اطلاعات نویسندگان
+                و پاسخ مستقیم به پرسش‌های رایج می‌تواند برای پاسخ‌های هوش مصنوعی مفیدتر شود.
+              </p>
+            </div>
+            <footer class="gy-ai-foot"><span>آخرین نظر: ۱۲ مهر ۱۴۰۵</span></footer>
+          </article>
 
-                        <h1>
-                            فقط برای جست‌وجو
-                            <span class="title-muted">بهینه نشوید.</span>
-                            <br>
-                            برای دنیای
-                            <span class="gold-text">هوش مصنوعی</span>
-                            آماده شوید.
-                        </h1>
+          <article class="gy-card gy-ai">
+            <header class="gy-ai-head">
+              <div class="gy-ai-name"><h3>Gemini</h3></div>
+              <span class="gy-pill is-ok">متصل</span>
+            </header>
+            <div class="gy-ai-body">
+              <p class="gy-ai-text">
+                محتوای راهنمای سایت پوشش موضوعی قابل قبولی دارد.
+                پیشنهاد می‌شود داده‌های ساختاریافته و شفافیت منابع تقویت شوند.
+              </p>
+            </div>
+            <footer class="gy-ai-foot"><span>آخرین نظر: ۱۲ مهر ۱۴۰۵</span></footer>
+          </article>
 
-                        <p class="hero-description">
-                            GEOYAR یک افزونه وردپرس برای بررسی و بهبود آمادگی
-                            وب‌سایت شما جهت حضور در دنیای موتورهای جست‌وجوی مولد
-                            و پاسخ‌های مبتنی بر هوش مصنوعی است.
-                        </p>
+          <article class="gy-card gy-ai">
+            <header class="gy-ai-head">
+              <div class="gy-ai-name"><h3>Grok</h3></div>
+              <span class="gy-pill is-off">متصل نیست</span>
+            </header>
+            <div class="gy-ai-body">
+              <p class="gy-muted">برای دریافت نظر این مدل، آن را در بخش اتصالات فعال کنید.</p>
+              <button class="gy-link" data-goto="connections">اتصال این مدل</button>
+            </div>
+          </article>
 
-                        <div class="hero-actions">
-                            <a href="#purchase" class="button button-primary">
-                                شروع با GEOYAR
-                                <span aria-hidden="true">←</span>
-                            </a>
+          <article class="gy-card gy-ai">
+            <header class="gy-ai-head">
+              <div class="gy-ai-name"><h3>DeepSeek</h3></div>
+              <span class="gy-pill is-off">متصل نیست</span>
+            </header>
+            <div class="gy-ai-body">
+              <p class="gy-muted">برای دریافت نظر این مدل، آن را در بخش اتصالات فعال کنید.</p>
+              <button class="gy-link" data-goto="connections">اتصال این مدل</button>
+            </div>
+          </article>
+        </section>
 
-                            <a href="#features" class="button button-secondary">
-                                آشنایی با قابلیت‌ها
-                            </a>
-                        </div>
+        <!-- Health / score chart -->
+        <section class="gy-card gy-health">
+          <div class="gy-card-head">
+            <div>
+              <h3>روند امتیاز سایت</h3>
+              <p>آخرین بررسی سایت: ۱۲ مهر ۱۴۰۵ · داده نمایشی</p>
+            </div>
+            <div class="gy-score">
+              <strong id="overall-score">۸۲</strong>
+              <span>از ۱۰۰</span>
+              <em class="is-up">↑ ۴ افزایش</em>
+            </div>
+          </div>
 
-                        <div class="hero-highlights">
-                            <div class="hero-highlight">
-                                <span class="highlight-icon">✦</span>
-                                <span>تحلیل هوشمند</span>
-                            </div>
+          <svg class="gy-demo-chart" viewBox="0 0 720 250" role="img" aria-label="نمودار نمونه امتیاز سایت">
+            <g>
+              <line class="grid" x1="55" y1="35" x2="690" y2="35"/>
+              <line class="grid" x1="55" y1="80" x2="690" y2="80"/>
+              <line class="grid" x1="55" y1="125" x2="690" y2="125"/>
+              <line class="grid" x1="55" y1="170" x2="690" y2="170"/>
+              <line class="grid" x1="55" y1="215" x2="690" y2="215"/>
+              <text x="35" y="39">۱۰۰</text>
+              <text x="35" y="84">۷۵</text>
+              <text x="35" y="129">۵۰</text>
+              <text x="35" y="174">۲۵</text>
+              <text x="35" y="219">۰</text>
+              <path class="area" d="M60 120 L165 110 L270 135 L375 95 L480 105 L585 75 L680 65 L680 215 L60 215Z"/>
+              <path class="line" d="M60 120 L165 110 L270 135 L375 95 L480 105 L585 75 L680 65"/>
+              <text x="60" y="240" text-anchor="middle">فروردین</text>
+              <text x="165" y="240" text-anchor="middle">اردیبهشت</text>
+              <text x="270" y="240" text-anchor="middle">خرداد</text>
+              <text x="375" y="240" text-anchor="middle">تیر</text>
+              <text x="480" y="240" text-anchor="middle">مرداد</text>
+              <text x="585" y="240" text-anchor="middle">شهریور</text>
+              <text x="680" y="240" text-anchor="middle">مهر</text>
+            </g>
+          </svg>
 
-                            <div class="hero-highlight">
-                                <span class="highlight-icon">⌘</span>
-                                <span>یکپارچه با وردپرس</span>
-                            </div>
+          <div class="gy-cats">
+            <div class="gy-cat">
+              <span>فنی</span>
+              <div class="gy-bar"><i style="width:88%"></i></div>
+              <b>۸۸</b>
+            </div>
+            <div class="gy-cat">
+              <span>سئو</span>
+              <div class="gy-bar"><i style="width:84%"></i></div>
+              <b>۸۴</b>
+            </div>
+            <div class="gy-cat">
+              <span>عملکرد</span>
+              <div class="gy-bar"><i style="width:76%"></i></div>
+              <b>۷۶</b>
+            </div>
+            <div class="gy-cat">
+              <span>محتوا</span>
+              <div class="gy-bar"><i style="width:79%"></i></div>
+              <b>۷۹</b>
+            </div>
+            <div class="gy-cat">
+              <span>GEO</span>
+              <div class="gy-bar"><i style="width:83%"></i></div>
+              <b>۸۳</b>
+            </div>
+          </div>
+        </section>
 
-                            <div class="hero-highlight">
-                                <span class="highlight-icon">↗</span>
-                                <span>تمرکز بر GEO</span>
-                            </div>
-                        </div>
+        <!-- Google Search Console summary -->
+        <section class="gy-card gy-gsc">
+          <div class="gy-card-head">
+            <div>
+              <h3>Google Search Console</h3>
+              <p>نمایش و کلیک سایت شما در نتایج گوگل · نمونه</p>
+            </div>
+            <span class="gy-pill is-ok">متصل</span>
+          </div>
+          <div class="gy-chart-grid">
+            <div class="gy-mini-stat">
+              <span>کلیک‌ها</span>
+              <strong>۲٬۴۸۰</strong>
+              <small>↑ ۱۲٫۴٪</small>
+            </div>
+            <div class="gy-mini-stat">
+              <span>نمایش‌ها</span>
+              <strong>۴۱٬۷۲۰</strong>
+              <small>↑ ۸٫۱٪</small>
+            </div>
+            <div class="gy-mini-stat">
+              <span>CTR میانگین</span>
+              <strong>۵٫۹٪</strong>
+              <small>نرخ کلیک</small>
+            </div>
+            <div class="gy-mini-stat">
+              <span>جایگاه میانگین</span>
+              <strong>۸٫۴</strong>
+              <small>رتبه تقریبی</small>
+            </div>
+          </div>
+        </section>
 
-                    </div>
+      </section>
 
-                    <div class="hero-visual">
+      <!-- ================= PAGE: CONNECTIONS ================= -->
+      <section class="gy-page" id="page-connections">
 
-                        <div class="visual-orbit orbit-one"></div>
-                        <div class="visual-orbit orbit-two"></div>
+        <div class="gy-pagehead">
+          <div class="gy-pagehead-text">
+            <div>
+              <h2>اتصالات</h2>
+              <p>مدل‌های هوش مصنوعی و Search Console را اینجا وصل کنید</p>
+            </div>
+          </div>
+        </div>
 
-                        <div class="floating-tag floating-tag-top">
-                            <span class="floating-tag-icon">✦</span>
-                            <span>
-                                <strong>تحلیل هوشمند</strong>
-                                <small>بررسی محتوای وب‌سایت</small>
-                            </span>
-                        </div>
+        <section class="gy-section">
+          <div class="gy-section-head">
+            <h3>هوش مصنوعی</h3>
+            <p>
+              برای هر مدل می‌توانید API شخصی تنظیم کنید.
+              اتصال خودکار در کادر ChatGPT بدون ورود کلید توسط کاربر فعال می‌شود.
+            </p>
+          </div>
 
-                        <div class="product-window">
+          <div class="gy-conn-grid">
 
-                            <div class="window-topbar">
-                                <div class="window-brand">
-                                    <span class="mini-brand-mark">G</span>
-                                    <span>GEOYAR</span>
-                                </div>
-
-                                <div class="window-controls">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-
-                            <div class="dashboard-preview">
-
-                                <aside class="preview-sidebar">
-                                    <div class="sidebar-logo">G</div>
-
-                                    <div class="sidebar-item active">
-                                        <span>▦</span>
-                                    </div>
-
-                                    <div class="sidebar-item">
-                                        <span>⌕</span>
-                                    </div>
-
-                                    <div class="sidebar-item">
-                                        <span>✧</span>
-                                    </div>
-
-                                    <div class="sidebar-item">
-                                        <span>⚙</span>
-                                    </div>
-                                </aside>
-
-                                <div class="preview-main">
-
-                                    <div class="preview-heading">
-                                        <div>
-                                            <span class="preview-overline">پنل مدیریت</span>
-                                            <h3>داشبورد GEO</h3>
-                                        </div>
-
-                                        <span class="preview-avatar">G</span>
-                                    </div>
-
-                                    <div class="preview-welcome">
-                                        <span>نمای کلی وب‌سایت</span>
-                                        <small>وضعیت بررسی و تحلیل سایت</small>
-                                    </div>
-
-                                    <div class="preview-metrics">
-
-                                        <div class="metric-card">
-                                            <span class="metric-label">وضعیت تحلیل</span>
-                                            <strong>آماده بررسی</strong>
-                                            <span class="metric-caption">
-                                                <i class="metric-indicator"></i>
-                                                سامانه تحلیل
-                                            </span>
-                                        </div>
-
-                                        <div class="metric-card">
-                                            <span class="metric-label">گزارش‌ها</span>
-                                            <strong>تحلیل سایت</strong>
-                                            <span class="metric-caption">
-                                                گزارش‌های قابل بررسی
-                                            </span>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="preview-analysis">
-
-                                        <div class="analysis-heading">
-                                            <strong>تحلیل آمادگی GEO</strong>
-                                            <span class="analysis-badge">نمونه نمایشی</span>
-                                        </div>
-
-                                        <div class="analysis-row">
-                                            <span class="analysis-symbol">✓</span>
-                                            <div class="analysis-copy">
-                                                <strong>بررسی ساختار محتوا</strong>
-                                                <small>ارزیابی اطلاعات صفحات</small>
-                                            </div>
-                                            <span class="analysis-state">تحلیل</span>
-                                        </div>
-
-                                        <div class="analysis-row">
-                                            <span class="analysis-symbol">✦</span>
-                                            <div class="analysis-copy">
-                                                <strong>تحلیل هوشمند</strong>
-                                                <small>بررسی فرصت‌های بهبود</small>
-                                            </div>
-                                            <span class="analysis-state">AI</span>
-                                        </div>
-
-                                        <div class="analysis-row">
-                                            <span class="analysis-symbol">↗</span>
-                                            <div class="analysis-copy">
-                                                <strong>بررسی وضعیت سایت</strong>
-                                                <small>شناسایی موارد قابل اصلاح</small>
-                                            </div>
-                                            <span class="analysis-state">GEO</span>
-                                        </div>
-
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                        <div class="floating-tag floating-tag-bottom">
-                            <span class="floating-tag-icon">↗</span>
-                            <span>
-                                <strong>GEO Optimization</strong>
-                                <small>آمادگی برای جست‌وجوی مولد</small>
-                            </span>
-                        </div>
-
-                    </div>
-
+            <!-- ChatGPT connection -->
+            <form class="gy-card gy-conn demo-form">
+              <header class="gy-conn-head">
+                <div class="gy-ai-name"><h4>ChatGPT</h4></div>
+                <label class="gy-switch">
+                  <input type="checkbox" checked data-toggle-conn>
+                  <i></i>
+                </label>
+              </header>
+              <div class="gy-conn-fields">
+                <div class="gy-field">
+                  <span class="gy-label">روش اتصال ChatGPT</span>
+                  <div class="gy-radio-row">
+                    <label><input type="radio" name="mode" value="api" checked><span>API شخصی</span></label>
+                    <label><input type="radio" name="mode" value="auto"><span>اتصال خودکار</span></label>
+                  </div>
                 </div>
-
-                <div class="container hero-bottom">
-                    <span>تمرکز بر آینده جست‌وجو</span>
-                    <span class="hero-bottom-line"></span>
-                    <span>Generative Engine Optimization</span>
+                <div class="gy-field" data-mode-show="api">
+                  <label class="gy-label">کلید API شخصی</label>
+                  <input type="password" placeholder="sk-••••••••••••" dir="ltr">
+                  <small class="gy-hint">
+                    برای نگه‌داشتن کلید فعلی، فیلد را خالی بگذارید.
+                    <a href="#" data-toast="این لینک در دمو به سرویس بیرونی متصل نیست.">ساخت کلید</a>
+                  </small>
                 </div>
-
-            </section>
-
-            <section class="intro-strip">
-                <div class="container intro-strip-inner">
-                    <div class="intro-strip-title">
-                        <span class="intro-strip-symbol">✳</span>
-                        <span>GEO چیست؟</span>
-                    </div>
-
-                    <p>
-                        GEO یا بهینه‌سازی برای موتورهای مولد، رویکردی برای
-                        بهبود نحوه درک، پردازش و استفاده از محتوای سایت در
-                        پاسخ‌های تولیدشده توسط سامانه‌های هوش مصنوعی است.
-                    </p>
+                <div class="gy-field" data-mode-show="api">
+                  <label class="gy-label">نام مدل</label>
+                  <input type="text" value="gpt-4.1-mini" dir="ltr">
                 </div>
-            </section>
-
-            <section class="section features-section" id="features">
-
-                <div class="container">
-
-                    <div class="section-heading">
-                        <div class="section-kicker">امکانات GEOYAR</div>
-
-                        <h2>
-                            ابزارهای لازم برای
-                            <span class="gold-text">بهبود آمادگی GEO</span>
-                        </h2>
-
-                        <p>
-                            اطلاعات سایت را بررسی کنید، فرصت‌های بهبود را
-                            بشناسید و برای تولید محتوای قابل‌فهم‌تر برای
-                            موتورهای مولد برنامه‌ریزی کنید.
-                        </p>
-                    </div>
-
-                    <div class="features-grid">
-
-                        <article class="feature-card feature-card-featured">
-
-                            <div class="feature-card-top">
-                                <span class="feature-icon feature-icon-gold">✦</span>
-                                <span class="feature-number">01</span>
-                            </div>
-
-                            <h3>تحلیل با هوش مصنوعی</h3>
-
-                            <p>
-                                از مدل‌های زبانی پشتیبانی‌شده برای بررسی
-                                اطلاعات وب‌سایت و دریافت پیشنهادهای قابل‌اجرا
-                                برای بهبود محتوای آن استفاده کنید.
-                            </p>
-
-                            <div class="feature-tags">
-                                <span>تحلیل محتوا</span>
-                                <span>پیشنهاد بهبود</span>
-                            </div>
-
-                            <div class="feature-card-decoration">AI</div>
-
-                        </article>
-
-                        <article class="feature-card">
-
-                            <div class="feature-card-top">
-                                <span class="feature-icon">⌕</span>
-                                <span class="feature-number">02</span>
-                            </div>
-
-                            <h3>بررسی وضعیت سایت</h3>
-
-                            <p>
-                                اطلاعات و ساختار سایت را بررسی کنید و مواردی
-                                را که به توجه و اصلاح نیاز دارند، در یک
-                                فرایند مشخص دنبال کنید.
-                            </p>
-
-                            <div class="feature-tags">
-                                <span>تحلیل سایت</span>
-                                <span>شناسایی مشکلات</span>
-                            </div>
-
-                        </article>
-
-                        <article class="feature-card">
-
-                            <div class="feature-card-top">
-                                <span class="feature-icon">▤</span>
-                                <span class="feature-number">03</span>
-                            </div>
-
-                            <h3>گزارش‌های قابل‌پیگیری</h3>
-
-                            <p>
-                                نتایج بررسی را در محیط افزونه مشاهده کنید
-                                و برای پیگیری موارد مهم و اصلاحات بعدی
-                                از آن‌ها استفاده کنید.
-                            </p>
-
-                            <div class="feature-tags">
-                                <span>گزارش بررسی</span>
-                                <span>پیگیری تغییرات</span>
-                            </div>
-
-                        </article>
-
-                        <article class="feature-card">
-
-                            <div class="feature-card-top">
-                                <span class="feature-icon">⌘</span>
-                                <span class="feature-number">04</span>
-                            </div>
-
-                            <h3>محیط یکپارچه وردپرس</h3>
-
-                            <p>
-                                امکانات افزونه را از داخل مدیریت وردپرس
-                                دنبال کنید و برای استفاده از قابلیت‌های
-                                اصلی، نیازی به ساخت پنل جداگانه نداشته باشید.
-                            </p>
-
-                            <div class="feature-tags">
-                                <span>WordPress</span>
-                                <span>مدیریت متمرکز</span>
-                            </div>
-
-                        </article>
-
-                        <article class="feature-card">
-
-                            <div class="feature-card-top">
-                                <span class="feature-icon">◷</span>
-                                <span class="feature-number">05</span>
-                            </div>
-
-                            <h3>بررسی دوره‌ای</h3>
-
-                            <p>
-                                بررسی‌های دوره‌ای را برای پیگیری وضعیت سایت
-                                در نظر بگیرید و تغییرات موردنیاز را در
-                                برنامه بهبود خود قرار دهید.
-                            </p>
-
-                            <div class="feature-tags">
-                                <span>پایش دوره‌ای</span>
-                                <span>برنامه بهبود</span>
-                            </div>
-
-                        </article>
-
-                        <article class="feature-card">
-
-                            <div class="feature-card-top">
-                                <span class="feature-icon">◎</span>
-                                <span class="feature-number">06</span>
-                            </div>
-
-                            <h3>ارتباط با سرویس‌های هوش مصنوعی</h3>
-
-                            <p>
-                                در صورت پیکربندی سرویس‌های پشتیبانی‌شده،
-                                تحلیل‌های هوش مصنوعی را مطابق امکانات
-                                نسخه نصب‌شده اجرا کنید.
-                            </p>
-
-                            <div class="feature-tags">
-                                <span>اتصال API</span>
-                                <span>پیکربندی سرویس</span>
-                            </div>
-
-                        </article>
-
-                    </div>
-
-                    <div class="features-note">
-                        <span class="note-icon">i</span>
-                        <p>
-                            امکانات نهایی در دسترس، به نسخه افزونه، تنظیمات
-                            اتصال و سرویس‌های فعال‌شده بستگی دارند.
-                        </p>
-                    </div>
-
+                <div class="gy-field" data-mode-show="auto" hidden>
+                  <div class="gy-flash">
+                    افزونه در این بخش از مدل های زبانی متفاوت به صورت رندوم استفاده می کند
+                  </div>
                 </div>
+              </div>
+              <footer class="gy-conn-foot">
+                <button type="button" class="gy-btn gy-btn-primary" data-toast="تنظیمات اتصال در دمو ذخیره نمی‌شود.">ذخیره</button>
+                <button type="button" class="gy-btn" data-test-connection>آزمایش اتصال</button>
+                <span class="gy-test-result"></span>
+              </footer>
+            </form>
 
-            </section>
-
-            <section class="section philosophy-section" id="workflow">
-
-                <div class="container philosophy-grid">
-
-                    <div class="philosophy-content">
-
-                        <div class="section-kicker">نگاه GEOYAR</div>
-
-                        <h2>
-                            آینده جست‌وجو
-                            <br>
-                            <span class="gold-text">فقط فهرستی از لینک‌ها نیست.</span>
-                        </h2>
-
-                        <p>
-                            کاربران بیش از گذشته پاسخ پرسش‌های خود را
-                            مستقیماً از سامانه‌های هوش مصنوعی دریافت می‌کنند.
-                            در این فضا، داشتن محتوای ارزشمند مهم است؛ اما
-                            ساختار مناسب، وضوح اطلاعات و قابل‌فهم بودن
-                            محتوا نیز اهمیت دارند.
-                        </p>
-
-                        <p>
-                            GEOYAR با تمرکز بر این رویکرد طراحی شده است
-                            تا مسیر بررسی و بهبود وب‌سایت برای دنیای
-                            جست‌وجوی مولد را ساده‌تر کند.
-                        </p>
-
-                        <a href="#dashboard" class="text-link">
-                            مشاهده محیط افزونه
-                            <span aria-hidden="true">←</span>
-                        </a>
-
-                    </div>
-
-                    <div class="philosophy-visual">
-
-                        <div class="philosophy-card">
-
-                            <div class="philosophy-card-header">
-                                <span class="philosophy-card-logo">G</span>
-                                <div>
-                                    <strong>از محتوا تا پاسخ</strong>
-                                    <small>نگاهی به مسیر GEO</small>
-                                </div>
-                            </div>
-
-                            <div class="flow-step">
-                                <span class="flow-step-icon">01</span>
-                                <div>
-                                    <strong>محتوای وب‌سایت</strong>
-                                    <small>اطلاعات و پاسخ‌های صفحات</small>
-                                </div>
-                            </div>
-
-                            <div class="flow-connector"></div>
-
-                            <div class="flow-step flow-step-active">
-                                <span class="flow-step-icon">02</span>
-                                <div>
-                                    <strong>تحلیل و بهبود</strong>
-                                    <small>بررسی ساختار و وضوح محتوا</small>
-                                </div>
-                            </div>
-
-                            <div class="flow-connector"></div>
-
-                            <div class="flow-step">
-                                <span class="flow-step-icon">03</span>
-                                <div>
-                                    <strong>آمادگی برای جست‌وجوی مولد</strong>
-                                    <small>بهبود قابلیت استفاده از اطلاعات</small>
-                                </div>
-                            </div>
-
-                            <div class="philosophy-footnote">
-                                <span>✦</span>
-                                هدف، بهبود کیفیت و دسترس‌پذیری اطلاعات است؛
-                                نه تضمین نمایش در پاسخ‌های هوش مصنوعی.
-                            </div>
-
-                        </div>
-
-                    </div>
-
+            <!-- Gemini connection -->
+            <form class="gy-card gy-conn demo-form">
+              <header class="gy-conn-head">
+                <div class="gy-ai-name"><h4>Gemini</h4></div>
+                <label class="gy-switch">
+                  <input type="checkbox" data-toggle-conn>
+                  <i></i>
+                </label>
+              </header>
+              <div class="gy-conn-fields">
+                <div class="gy-field">
+                  <label class="gy-label">کلید API شخصی</label>
+                  <input type="password" placeholder="کلید API را وارد کنید" dir="ltr">
                 </div>
-
-            </section>
-
-            <section class="section dashboard-section" id="dashboard">
-
-                <div class="container">
-
-                    <div class="section-heading">
-                        <div class="section-kicker">محیط کاربری</div>
-
-                        <h2>
-                            ابزارهای شما،
-                            <span class="gold-text">در یک محیط متمرکز</span>
-                        </h2>
-
-                        <p>
-                            یک نمای گرافیکی از فضای کاری GEOYAR را مشاهده کنید.
-                            تصویر زیر صرفاً پیش‌نمایش طراحی است و اطلاعات
-                            آن لزوماً داده واقعی یک سایت نیست.
-                        </p>
-                    </div>
-
-                    <div class="dashboard-showcase">
-
-                        <div class="showcase-sidebar">
-
-                            <div class="showcase-brand">
-                                <span class="showcase-brand-mark">G</span>
-                                <span>GEOYAR</span>
-                            </div>
-
-                            <div class="showcase-menu-label">فضای کاری</div>
-
-                            <div class="showcase-menu-item active">
-                                <span>▦</span>
-                                داشبورد
-                            </div>
-
-                            <div class="showcase-menu-item">
-                                <span>✦</span>
-                                تحلیل هوشمند
-                            </div>
-
-                            <div class="showcase-menu-item">
-                                <span>⌕</span>
-                                بررسی سایت
-                            </div>
-
-                            <div class="showcase-menu-item">
-                                <span>▤</span>
-                                گزارش‌ها
-                            </div>
-
-                            <div class="showcase-menu-item">
-                                <span>⚙</span>
-                                تنظیمات
-                            </div>
-
-                            <div class="showcase-sidebar-bottom">
-                                <span class="sidebar-bottom-dot"></span>
-                                پیش‌نمایش رابط کاربری
-                            </div>
-
-                        </div>
-
-                        <div class="showcase-content">
-
-                            <div class="showcase-topbar">
-
-                                <div>
-                                    <span class="showcase-breadcrumb">
-                                        GEOYAR / داشبورد
-                                    </span>
-                                    <h3>نمای کلی</h3>
-                                </div>
-
-                                <span class="showcase-profile">G</span>
-
-                            </div>
-
-                            <div class="showcase-welcome">
-                                <div>
-                                    <h4>به GEOYAR خوش آمدید</h4>
-                                    <p>
-                                        مسیر بررسی و بهبود آمادگی GEO سایت خود را دنبال کنید.
-                                    </p>
-                                </div>
-
-                                <span class="welcome-sparkle">✦</span>
-                            </div>
-
-                            <div class="showcase-stats">
-
-                                <div class="showcase-stat">
-                                    <span class="stat-icon stat-icon-one">⌕</span>
-                                    <span class="stat-title">بررسی سایت</span>
-                                    <strong>تحلیل وضعیت</strong>
-                                    <small>بررسی اطلاعات صفحات</small>
-                                </div>
-
-                                <div class="showcase-stat">
-                                    <span class="stat-icon stat-icon-two">✦</span>
-                                    <span class="stat-title">تحلیل هوشمند</span>
-                                    <strong>پیشنهادهای بهبود</strong>
-                                    <small>با توجه به اطلاعات موجود</small>
-                                </div>
-
-                                <div class="showcase-stat">
-                                    <span class="stat-icon stat-icon-three">▤</span>
-                                    <span class="stat-title">گزارش‌ها</span>
-                                    <strong>پیگیری نتایج</strong>
-                                    <small>مرور موارد بررسی‌شده</small>
-                                </div>
-
-                            </div>
-
-                            <div class="showcase-lower-grid">
-
-                                <div class="showcase-panel">
-
-                                    <div class="panel-heading">
-                                        <div>
-                                            <strong>مسیر بهبود سایت</strong>
-                                            <small>نمونه‌ای از گردش کار</small>
-                                        </div>
-
-                                        <span class="panel-more">•••</span>
-                                    </div>
-
-                                    <div class="progress-item">
-                                        <div class="progress-item-heading">
-                                            <span>بررسی محتوا</span>
-                                            <span>مرحله ۱</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <span class="progress-fill progress-fill-one"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="progress-item">
-                                        <div class="progress-item-heading">
-                                            <span>تحلیل ساختار</span>
-                                            <span>مرحله ۲</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <span class="progress-fill progress-fill-two"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="progress-item">
-                                        <div class="progress-item-heading">
-                                            <span>برنامه‌ریزی اصلاحات</span>
-                                            <span>مرحله ۳</span>
-                                        </div>
-                                        <div class="progress-track">
-                                            <span class="progress-fill progress-fill-three"></span>
-                                        </div>
-                                    </div>
-
-                                    <div class="panel-disclaimer">
-                                        این نوارها نمایشی هستند و میزان پیشرفت واقعی را نشان نمی‌دهند.
-                                    </div>
-
-                                </div>
-
-                                <div class="showcase-panel showcase-ai-panel">
-
-                                    <div class="panel-heading">
-                                        <div>
-                                            <strong>دستیار هوشمند</strong>
-                                            <small>نمونه فضای تحلیل</small>
-                                        </div>
-
-                                        <span class="ai-status">
-                                            <i></i>
-                                            نمایشی
-                                        </span>
-                                    </div>
-
-                                    <div class="ai-decoration">
-                                        <span class="ai-decoration-ring"></span>
-                                        <span class="ai-decoration-core">✦</span>
-                                    </div>
-
-                                    <h4>محتوای خود را بهتر بشناسید</h4>
-
-                                    <p>
-                                        بررسی کنید کدام بخش‌های سایت برای
-                                        ارائه اطلاعات روشن و ساختاریافته
-                                        به بهبود نیاز دارند.
-                                    </p>
-
-                                    <div class="ai-example-tags">
-                                        <span>وضوح محتوا</span>
-                                        <span>ساختار صفحات</span>
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="showcase-caption">
-                        <span class="caption-dot"></span>
-                        تصویرسازی مفهومی از محیط افزونه؛ نه گزارش واقعی یا نتیجه تضمین‌شده.
-                    </div>
-
+                <div class="gy-field">
+                  <label class="gy-label">نام مدل</label>
+                  <input type="text" value="gemini-2.5-flash" dir="ltr">
                 </div>
+              </div>
+              <footer class="gy-conn-foot">
+                <button type="button" class="gy-btn gy-btn-primary" data-toast="تنظیمات اتصال در دمو ذخیره نمی‌شود.">ذخیره</button>
+                <button type="button" class="gy-btn" data-test-connection>آزمایش اتصال</button>
+                <span class="gy-test-result"></span>
+              </footer>
+            </form>
 
-            </section>
-
-            <section class="section comparison-section">
-
-                <div class="container">
-
-                    <div class="section-heading">
-                        <div class="section-kicker">چرا GEO اهمیت دارد؟</div>
-
-                        <h2>
-                            یک قدم فراتر از
-                            <span class="gold-text">نگاه سنتی به سئو</span>
-                        </h2>
-
-                        <p>
-                            GEO جایگزین کامل SEO نیست؛ رویکردی مکمل برای
-                            توجه به نحوه استفاده موتورهای مولد از محتوای وب است.
-                        </p>
-                    </div>
-
-                    <div class="comparison-grid">
-
-                        <article class="comparison-card">
-                            <div class="comparison-card-icon">⌕</div>
-
-                            <h3>سئو سنتی</h3>
-
-                            <p>
-                                تمرکز بر بهبود قابلیت خزش و نمایه‌سازی،
-                                ارتباط صفحه با عبارت‌های جست‌وجو و عملکرد
-                                آن در نتایج جست‌وجوی متعارف.
-                            </p>
-
-                            <div class="comparison-footer">
-                                <span class="comparison-line"></span>
-                                <span>Search Engine Optimization</span>
-                            </div>
-                        </article>
-
-                        <div class="comparison-plus">+</div>
-
-                        <article class="comparison-card comparison-card-highlight">
-                            <div class="comparison-card-icon">✦</div>
-
-                            <h3>بهینه‌سازی GEO</h3>
-
-                            <p>
-                                توجه به وضوح، ساختار و ارزش اطلاعات برای
-                                افزایش شانس استفاده از محتوای سایت در
-                                پاسخ‌های سامانه‌های هوش مصنوعی.
-                            </p>
-
-                            <div class="comparison-footer">
-                                <span class="comparison-line"></span>
-                                <span>Generative Engine Optimization</span>
-                            </div>
-                        </article>
-
-                    </div>
-
-                    <div class="comparison-bottom-note">
-                        <span>✳</span>
-                        <p>
-                            نتیجه نهایی به کیفیت محتوا، وضعیت فنی سایت،
-                            سیاست‌های هر پلتفرم و عوامل خارج از کنترل افزونه بستگی دارد.
-                        </p>
-                    </div>
-
+            <!-- Grok connection -->
+            <form class="gy-card gy-conn demo-form">
+              <header class="gy-conn-head">
+                <div class="gy-ai-name"><h4>Grok</h4></div>
+                <label class="gy-switch">
+                  <input type="checkbox" data-toggle-conn>
+                  <i></i>
+                </label>
+              </header>
+              <div class="gy-conn-fields">
+                <div class="gy-field">
+                  <label class="gy-label">کلید API شخصی</label>
+                  <input type="password" placeholder="کلید API را وارد کنید" dir="ltr">
                 </div>
-
-            </section>
-
-            <section class="section use-cases-section">
-
-                <div class="container use-cases-grid">
-
-                    <div class="use-cases-heading">
-                        <div class="section-kicker">برای چه کسانی؟</div>
-
-                        <h2>
-                            برای کسانی که
-                            <span class="gold-text">به آینده محتوا فکر می‌کنند.</span>
-                        </h2>
-
-                        <p>
-                            GEOYAR می‌تواند بخشی از فرایند بررسی و بهبود
-                            سایت برای مدیران و متخصصانی باشد که می‌خواهند
-                            حضور آنلاین خود را با تغییرات جست‌وجو هماهنگ کنند.
-                        </p>
-                    </div>
-
-                    <div class="use-cases-list">
-
-                        <div class="use-case-item">
-                            <span class="use-case-number">01</span>
-                            <div>
-                                <h3>مدیران وب‌سایت</h3>
-                                <p>
-                                    برای شناخت بهتر وضعیت محتوای سایت و
-                                    برنامه‌ریزی جهت بهبود آن.
-                                </p>
-                            </div>
-                            <span class="use-case-arrow">↙</span>
-                        </div>
-
-                        <div class="use-case-item">
-                            <span class="use-case-number">02</span>
-                            <div>
-                                <h3>متخصصان سئو و محتوا</h3>
-                                <p>
-                                    برای افزودن نگاه GEO به فرایند تحلیل،
-                                    تولید و بهینه‌سازی محتوا.
-                                </p>
-                            </div>
-                            <span class="use-case-arrow">↙</span>
-                        </div>
-
-                        <div class="use-case-item">
-                            <span class="use-case-number">03</span>
-                            <div>
-                                <h3>کسب‌وکارهای آنلاین</h3>
-                                <p>
-                                    برای توجه بیشتر به کیفیت اطلاعاتی که
-                                    در وب‌سایت خود منتشر می‌کنند.
-                                </p>
-                            </div>
-                            <span class="use-case-arrow">↙</span>
-                        </div>
-
-                    </div>
-
+                <div class="gy-field">
+                  <label class="gy-label">نام مدل</label>
+                  <input type="text" value="grok-3-mini" dir="ltr">
                 </div>
+              </div>
+              <footer class="gy-conn-foot">
+                <button type="button" class="gy-btn gy-btn-primary" data-toast="تنظیمات اتصال در دمو ذخیره نمی‌شود.">ذخیره</button>
+                <button type="button" class="gy-btn" data-test-connection>آزمایش اتصال</button>
+                <span class="gy-test-result"></span>
+              </footer>
+            </form>
 
-            </section>
-
-            <section class="section faq-section" id="faq">
-
-                <div class="container faq-grid">
-
-                    <div class="faq-intro">
-                        <div class="section-kicker">سؤالات متداول</div>
-
-                        <h2>
-                            قبل از شروع،
-                            <span class="gold-text">بیشتر بدانید.</span>
-                        </h2>
-
-                        <p>
-                            پاسخ چند پرسش مهم درباره GEOYAR و بهینه‌سازی
-                            برای موتورهای جست‌وجوی مولد.
-                        </p>
-                    </div>
-
-                    <div class="faq-list">
-
-                        <details class="faq-item" open>
-                            <summary>
-                                GEOYAR دقیقاً چه کاری انجام می‌دهد؟
-                                <span class="faq-toggle"></span>
-                            </summary>
-
-                            <div class="faq-answer">
-                                <p>
-                                    GEOYAR یک افزونه وردپرس با تمرکز بر GEO است.
-                                    بسته به امکانات نسخه نصب‌شده و سرویس‌های
-                                    پیکربندی‌شده، می‌تواند برای بررسی اطلاعات
-                                    سایت و دریافت تحلیل‌ها و پیشنهادهای بهبود
-                                    مورد استفاده قرار گیرد.
-                                </p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary>
-                                آیا GEOYAR جایگزین افزونه سئو می‌شود؟
-                                <span class="faq-toggle"></span>
-                            </summary>
-
-                            <div class="faq-answer">
-                                <p>
-                                    به طور کلی این دو حوزه متفاوتی هستن اما افزونه جئویار به طور مداوم به بهینه شدن سایت شما کمک می‌کند
-                                    و این باعث بهتر شدن رتبه شما برای موتورهای جست و جو نیز می‌شود
-                                </p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary>
-                                آیا با GEOYAR حتماً در پاسخ‌های هوش مصنوعی نمایش داده می‌شوم؟
-                                <span class="faq-toggle"></span>
-                            </summary>
-
-                            <div class="faq-answer">
-                                <p>
-                                    پذیرش سایت شما توسط هوش مصنوعی بیشتر به بهینه بودن سایت (مخصوصا از لحاظ فنی)
-                                    مربوط می‌شود اما این افزونه در بازار حال حاضر دنیا قوی ترین افزونه موجود برای جئو می باشد
-                                </p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary>
-                                آیا برای تحلیل هوشمند به API نیاز دارم؟
-                                <span class="faq-toggle"></span>
-                            </summary>
-
-                            <div class="faq-answer">
-                                <p>
-                                    نیاز به API به روش اتصال و تنظیمات نسخه
-                                    مورد استفاده بستگی دارد. پیش از خرید،
-                                    شرایط اتصال و نیازمندی‌های اعلام‌شده در
-                                    صفحه محصول را بررسی کنید.
-                                </p>
-                            </div>
-                        </details>
-
-                        <details class="faq-item">
-                            <summary>
-                                آیا GEOYAR روی وردپرس نصب می‌شود؟
-                                <span class="faq-toggle"></span>
-                            </summary>
-
-                            <div class="faq-answer">
-                                <p>
-                                    بله، GEOYAR به‌عنوان افزونه وردپرس ارائه
-                                    می‌شود. نسخه وردپرس و PHP موردنیاز را
-                                    مطابق اطلاعات فنی نسخه‌ای که تهیه می‌کنید
-                                    بررسی کنید.
-                                </p>
-                            </div>
-                        </details>
-
-                    </div>
-
+            <!-- DeepSeek connection -->
+            <form class="gy-card gy-conn demo-form">
+              <header class="gy-conn-head">
+                <div class="gy-ai-name"><h4>DeepSeek</h4></div>
+                <label class="gy-switch">
+                  <input type="checkbox" data-toggle-conn>
+                  <i></i>
+                </label>
+              </header>
+              <div class="gy-conn-fields">
+                <div class="gy-field">
+                  <label class="gy-label">کلید API شخصی</label>
+                  <input type="password" placeholder="کلید API را وارد کنید" dir="ltr">
                 </div>
-
-            </section>
-
-            <section class="purchase-section" id="purchase">
-
-                <div class="purchase-background-glow"></div>
-
-                <div class="container purchase-container">
-
-                    <div class="purchase-content">
-
-                        <div class="purchase-kicker">
-                            <span>✦</span>
-                            قدم بعدی برای سایت شما
-                        </div>
-
-                        <h2>
-                            برای نسل بعدی
-                            <br>
-                            <span class="gold-text">جست‌وجو آماده شوید.</span>
-                        </h2>
-
-                        <p>
-                            با GEOYAR مسیر بررسی و بهبود آمادگی سایت خود
-                            برای دنیای موتورهای جست‌وجوی مولد را آغاز کنید.
-                        </p>
-
-                        <div class="purchase-actions">
-                            <a
-                                href="https://www.zhaket.com/"
-                                class="button button-primary button-large"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                مشاهده صفحه محصول
-                                <span aria-hidden="true">↗</span>
-                            </a>
-
-                            <a href="#features" class="purchase-secondary-link">
-                                مرور قابلیت‌ها
-                            </a>
-                        </div>
-
-                        <div class="purchase-disclaimer">
-                            <span>i</span>
-                            پیش از خرید، نیازمندی‌های فنی و امکانات نسخه محصول را بررسی کنید.
-                        </div>
-
-                    </div>
-
-                    <div class="purchase-visual">
-
-                        <div class="purchase-ring purchase-ring-one"></div>
-                        <div class="purchase-ring purchase-ring-two"></div>
-
-                        <div class="purchase-logo">
-                            <span>G</span>
-                        </div>
-
-                        <div class="purchase-orbit-label purchase-label-one">
-                            <span>AI</span>
-                            <small>تحلیل هوشمند</small>
-                        </div>
-
-                        <div class="purchase-orbit-label purchase-label-two">
-                            <span>GEO</span>
-                            <small>بهینه‌سازی مولد</small>
-                        </div>
-
-                        <div class="purchase-orbit-label purchase-label-three">
-                            <span>WP</span>
-                            <small>وردپرس</small>
-                        </div>
-
-                    </div>
-
+                <div class="gy-field">
+                  <label class="gy-label">نام مدل</label>
+                  <input type="text" value="deepseek-chat" dir="ltr">
                 </div>
+              </div>
+              <footer class="gy-conn-foot">
+                <button type="button" class="gy-btn gy-btn-primary" data-toast="تنظیمات اتصال در دمو ذخیره نمی‌شود.">ذخیره</button>
+                <button type="button" class="gy-btn" data-test-connection>آزمایش اتصال</button>
+                <span class="gy-test-result"></span>
+              </footer>
+            </form>
 
-            </section>
+          </div>
+        </section>
 
-        </main>
+        <!-- Google Search Console connection -->
+        <section class="gy-section" id="gsc">
+          <div class="gy-section-head">
+            <h3>Google Search Console</h3>
+            <p>
+              برای نمایش واقعی «نمایش» و «کلیک» در داشبورد. فقط خواندن؛
+              GEOYAR هیچ تغییری در حساب شما نمی‌دهد.
+            </p>
+          </div>
 
-        <footer class="site-footer">
-
-            <div class="container footer-main">
-
-                <div class="footer-brand-column">
-
-                    <a href="#" class="brand footer-brand">
-                        <span class="brand-mark">G</span>
-                        <span class="brand-name">GEO<span>YAR</span></span>
-                    </a>
-
-                    <p>
-                        دستیار شما برای بررسی و بهبود آمادگی وب‌سایت
-                        در دنیای موتورهای جست‌وجوی مولد.
-                    </p>
-
-                </div>
-
-                <div class="footer-links-column">
-                    <h3>دسترسی سریع</h3>
-                    <a href="#features">قابلیت‌ها</a>
-                    <a href="#workflow">رویکرد GEO</a>
-                    <a href="#dashboard">محیط افزونه</a>
-                    <a href="#faq">سؤالات متداول</a>
-                </div>
-
-                <div class="footer-links-column">
-                    <h3>درباره محصول</h3>
-                    <a href="#purchase">صفحه خرید</a>
-                    <a href="#features">امکانات افزونه</a>
-                    <a href="#dashboard">پیش‌نمایش رابط کاربری</a>
-                </div>
-
-                <div class="footer-note-column">
-                    <span class="footer-note-icon">✳</span>
-                    <h3>GEO، فراتر از سئو</h3>
-                    <p>
-                        بهبود محتوا و ساختار سایت برای دنیایی که پاسخ‌ها
-                        بیش از گذشته توسط هوش مصنوعی تولید می‌شوند.
-                    </p>
-                </div>
-
+          <div class="gy-card gy-gsc-conn">
+            <div class="gy-card-head">
+              <div>
+                <h4>وضعیت اتصال</h4>
+                <p>نمونه: اتصال نیازمند تنظیم است</p>
+              </div>
+              <span class="gy-pill is-off">متصل نیست</span>
             </div>
 
-            <div class="container footer-bottom">
-                <span>GEOYAR — Generative Engine Optimization</span>
-                <span>طراحی‌شده برای معرفی نسل جدید بهینه‌سازی وب</span>
+            <div class="gy-grid-two">
+              <div class="gy-field">
+                <label class="gy-label">روش اتصال</label>
+                <select>
+                  <option>Service Account</option>
+                  <option>ورود گوگل (OAuth)</option>
+                </select>
+              </div>
+              <div class="gy-field">
+                <label class="gy-label">Property سایت</label>
+                <input dir="ltr" placeholder="https://example.com/">
+              </div>
             </div>
 
-        </footer>
+            <div class="gy-field" style="margin-top:18px">
+              <label class="gy-label">ایمیل Service Account</label>
+              <input dir="ltr" placeholder="service-account@example.iam.gserviceaccount.com">
+            </div>
+
+            <div class="gy-conn-foot">
+              <button type="button" class="gy-btn gy-btn-primary" data-toast="اتصال واقعی در نسخه دمو انجام نمی‌شود.">ذخیره اتصال</button>
+              <button type="button" class="gy-btn" data-toast="در دمو پنجره ورود گوگل باز نمی‌شود.">اتصال با گوگل</button>
+            </div>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- ================= PAGE: CONTENT GAPS ================= -->
+      <section class="gy-page" id="page-content-gaps">
+
+        <div class="gy-pagehead">
+          <div class="gy-pagehead-text">
+            <div>
+              <h2>خلأ محتوایی</h2>
+              <p>سه پیشنهاد محتوایی متناسب با سایت شما؛ با استفاده از مدل فعال‌شده در بخش اتصالات.</p>
+            </div>
+          </div>
+        </div>
+
+        <section class="gy-card gy-gap-intro">
+          <div class="gy-section-head">
+            <h3>پیشنهاد عنوان محتوا</h3>
+            <p>
+              برای کنترل مصرف API، هر مدیر سایت می‌تواند هر ۷ روز یک‌بار پیشنهاد تازه دریافت کند.
+              عنوان نوشته‌ها و برگه‌های منتشرشده پیش از پیشنهاددهی بررسی می‌شوند تا عنوان تکراری پیشنهاد نشود.
+              سطح رقابت تخمینی است و داده آماری مستقیم از رقبا نیست.
+            </p>
+          </div>
+          <button class="gy-btn gy-btn-primary" id="generate-gaps">✦ پیشنهاد سه عنوان</button>
+          <p class="gy-hint">
+            در دمو پیشنهادهای نمونه قابل نمایش مجدد هستند؛ محدودیت ۷ روزه در نسخه واقعی اعمال می‌شود.
+          </p>
+        </section>
+
+        <div class="gy-gap-grid" id="gap-results">
+          <article class="gy-card gy-gap-card">
+            <span class="gy-gap-number">۱</span>
+            <h3>راهنمای انتخاب بهترین ابزار برای مدیریت محتوای سایت</h3>
+            <p class="gy-gap-competition">سطح رقابت: <strong class="is-medium">متوسط</strong></p>
+            <p class="gy-gap-reason">موضوعی کاربردی برای مخاطبانی که به دنبال مقایسه راهکارها هستند.</p>
+          </article>
+
+          <article class="gy-card gy-gap-card">
+            <span class="gy-gap-number">۲</span>
+            <h3>چگونه محتوای سایت را برای پاسخ‌های هوش مصنوعی آماده کنیم؟</h3>
+            <p class="gy-gap-competition">سطح رقابت: <strong class="is-low">کم</strong></p>
+            <p class="gy-gap-reason">فرصتی برای توسعه محتوای تخصصی و پاسخ‌محور.</p>
+          </article>
+
+          <article class="gy-card gy-gap-card">
+            <span class="gy-gap-number">۳</span>
+            <h3>چک‌لیست فنی پیش از انتشار یک مقاله سئوشده</h3>
+            <p class="gy-gap-competition">سطح رقابت: <strong class="is-high">زیاد</strong></p>
+            <p class="gy-gap-reason">قابل تبدیل به محتوای مرجع همراه با چک‌لیست اجرایی.</p>
+          </article>
+        </div>
+
+      </section>
+
+      <!-- ================= PAGE: ACTIONS ================= -->
+      <section class="gy-page" id="page-actions">
+
+        <div class="gy-pagehead">
+          <div class="gy-pagehead-text">
+            <div>
+              <h2>مرکز اقدامات</h2>
+              <p>ببینید مشکل‌ها بیشتر کجاست و از کجا شروع کنید</p>
+            </div>
+          </div>
+          <div class="gy-pagehead-actions">
+            <button class="gy-btn gy-btn-primary" data-scan>↻ بررسی دوباره سایت</button>
+          </div>
+        </div>
+
+        <section class="gy-section">
+          <div class="gy-section-head gy-section-head-row">
+            <div>
+              <h3>اقدامات پیشنهادی</h3>
+              <p><span id="issue-count">۵</span> مورد نیازمند توجه</p>
+            </div>
+            <div class="gy-chips">
+              <button class="gy-chip is-on" data-filter="all">همه</button>
+              <button class="gy-chip" data-filter="CRITICAL">بحرانی</button>
+              <button class="gy-chip" data-filter="WARNING">هشدار</button>
+            </div>
+          </div>
+
+          <div class="gy-issues" id="issues">
+
+            <details class="gy-card gy-issue" data-status="CRITICAL">
+              <summary>
+                <span class="gy-dot is-critical"></span>
+                <span class="gy-issue-title">توضیحات متا برای چند صفحه کامل نیست</span>
+                <span class="gy-chip-static">سئو</span>
+                <span class="gy-pill is-critical">بحرانی</span>
+              </summary>
+              <div class="gy-issue-body">
+                <p>تعدادی از صفحات توضیح متای اختصاصی ندارند.</p>
+                <div>
+                  <b>چرا مهم است؟</b>
+                  <p>توضیحات مناسب به موتورهای جست‌وجو و کاربران کمک می‌کند موضوع صفحه را بهتر درک کنند.</p>
+                </div>
+                <div class="gy-rec">
+                  <b>اقدام پیشنهادی</b>
+                  <p>برای صفحات مهم توضیح کوتاه، یکتا و مرتبط بنویسید.</p>
+                </div>
+              </div>
+            </details>
+
+            <details class="gy-card gy-issue" data-status="WARNING">
+              <summary>
+                <span class="gy-dot is-warning"></span>
+                <span class="gy-issue-title">تصاویر چند صفحه متن جایگزین ندارند</span>
+                <span class="gy-chip-static">محتوا</span>
+                <span class="gy-pill is-warning">هشدار</span>
+              </summary>
+              <div class="gy-issue-body">
+                <p>برای برخی تصاویر مقدار alt ثبت نشده است.</p>
+                <div class="gy-rec">
+                  <b>اقدام پیشنهادی</b>
+                  <p>برای تصاویر معنادار متن جایگزین توصیفی اضافه کنید.</p>
+                </div>
+              </div>
+            </details>
+
+            <details class="gy-card gy-issue" data-status="CRITICAL">
+              <summary>
+                <span class="gy-dot is-critical"></span>
+                <span class="gy-issue-title">عنوان اصلی در بعضی صفحات مشخص نیست</span>
+                <span class="gy-chip-static">فنی</span>
+                <span class="gy-pill is-critical">بحرانی</span>
+              </summary>
+              <div class="gy-issue-body">
+                <p>ساختار تیتر در چند صفحه نیاز به بررسی دارد.</p>
+                <div class="gy-rec">
+                  <b>اقدام پیشنهادی</b>
+                  <p>یک عنوان اصلی روشن برای هر صفحه تعریف کنید.</p>
+                </div>
+              </div>
+            </details>
+
+            <details class="gy-card gy-issue" data-status="WARNING">
+              <summary>
+                <span class="gy-dot is-warning"></span>
+                <span class="gy-issue-title">زمان بارگذاری در موبایل قابل بهبود است</span>
+                <span class="gy-chip-static">عملکرد</span>
+                <span class="gy-pill is-warning">هشدار</span>
+              </summary>
+              <div class="gy-issue-body">
+                <p>برخی منابع ممکن است بارگذاری اولیه را کند کنند.</p>
+                <div class="gy-rec">
+                  <b>اقدام پیشنهادی</b>
+                  <p>تصاویر را بهینه و اسکریپت‌های غیرضروری را به تعویق بیندازید.</p>
+                </div>
+              </div>
+            </details>
+
+            <details class="gy-card gy-issue" data-status="INFO">
+              <summary>
+                <span class="gy-dot is-info"></span>
+                <span class="gy-issue-title">داده‌های ساختاریافته قابل توسعه هستند</span>
+                <span class="gy-chip-static">GEO</span>
+                <span class="gy-pill">اطلاعاتی</span>
+              </summary>
+              <div class="gy-issue-body">
+                <p>افزودن داده‌های ساختاریافته مرتبط می‌تواند به درک بهتر محتوا کمک کند.</p>
+              </div>
+            </details>
+
+          </div>
+
+          <p id="empty-filter" class="gy-empty-filter" hidden>موردی با این فیلتر وجود ندارد.</p>
+
+          <details class="gy-card gy-passed">
+            <summary><span>موارد سالم</span><b>۴</b></summary>
+            <ul>
+              <li>ساختار کلی صفحات قابل دسترسی است</li>
+              <li>عنوان سایت تنظیم شده است</li>
+              <li>نسخه موبایل فعال است</li>
+              <li>نشانی اصلی سایت پاسخ می‌دهد</li>
+            </ul>
+          </details>
+        </section>
+
+        <!-- DB cleanup -->
+        <section class="gy-section">
+          <div class="gy-section-head">
+            <h3>پاک‌سازی امن دیتابیس</h3>
+            <p>
+              قبل از هر عملیات، تعداد دقیق موارد قابل حذف را می‌بینید.
+              در نسخه واقعی عملیات دسته‌ای انجام می‌شود.
+              پیش از حذف از سایت نسخه پشتیبان داشته باشید.
+            </p>
+          </div>
+
+          <div class="gy-opt-grid">
+            <article class="gy-card gy-opt">
+              <div>
+                <h4>بازبینی‌های قدیمی نوشته‌ها</h4>
+                <p>نسخه‌های ذخیره‌شده قدیمی نوشته‌ها</p>
+              </div>
+              <div class="gy-opt-foot">
+                <strong>۲۴۸ <small>مورد</small></strong>
+                <button class="gy-btn" data-cleanup>بررسی و پاک‌سازی</button>
+              </div>
+            </article>
+
+            <article class="gy-card gy-opt">
+              <div>
+                <h4>پیش‌نویس‌های خودکار</h4>
+                <p>پیش‌نویس‌های خودکار باقی‌مانده</p>
+              </div>
+              <div class="gy-opt-foot">
+                <strong>۳۶ <small>مورد</small></strong>
+                <button class="gy-btn" data-cleanup>بررسی و پاک‌سازی</button>
+              </div>
+            </article>
+
+            <article class="gy-card gy-opt">
+              <div>
+                <h4>نظرات اسپم</h4>
+                <p>نظرات علامت‌گذاری‌شده به‌عنوان اسپم</p>
+              </div>
+              <div class="gy-opt-foot">
+                <strong>۱۷ <small>مورد</small></strong>
+                <button class="gy-btn" data-cleanup>بررسی و پاک‌سازی</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+      </section>
+
+      <!-- ================= PAGE: SETTINGS ================= -->
+      <section class="gy-page" id="page-settings">
+
+        <div class="gy-pagehead">
+          <div class="gy-pagehead-text">
+            <div>
+              <h2>تنظیمات</h2>
+              <p>اعلان‌ها، راحتی دید و کنترل داده‌ها</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="gy-settings demo-form">
+
+          <!-- Notifications -->
+          <section class="gy-card gy-set">
+            <div class="gy-set-head">
+              <h3>اعلان‌ها</h3>
+              <p>فقط وقتی لازم است خبرتان می‌کنیم؛ نه بیشتر.</p>
+            </div>
+            <label class="gy-row-switch">
+              <span>
+                <strong>گزارش ماهانه</strong>
+                <small>بعد از دریافت ماهانهٔ نظر هوش مصنوعی، یک خلاصه به ایمیل بفرست.</small>
+              </span>
+              <span class="gy-switch">
+                <input type="checkbox" checked>
+                <i></i>
+              </span>
+            </label>
+            <div class="gy-field">
+              <label class="gy-label">ایمیل گیرنده</label>
+              <input type="email" dir="ltr" value="admin@example.com">
+              <small class="gy-hint">اگر خالی بماند، ایمیل مدیر سایت استفاده می‌شود.</small>
+            </div>
+          </section>
+
+          <!-- Accessibility -->
+          <section class="gy-card gy-set">
+            <div class="gy-set-head">
+              <h3>راحتی و دسترسی‌پذیری</h3>
+              <p>ظاهر پنل را برای چشم و ذهن خودتان آرام‌تر کنید.</p>
+            </div>
+            <div class="gy-field">
+              <span class="gy-label">اندازه متن</span>
+              <div class="gy-radio-row">
+                <label><input type="radio" name="font" value="md" checked><span>معمولی</span></label>
+                <label><input type="radio" name="font" value="lg"><span>بزرگ</span></label>
+                <label><input type="radio" name="font" value="xl"><span>خیلی بزرگ</span></label>
+              </div>
+            </div>
+            <div class="gy-field">
+              <span class="gy-label">فاصله‌ها</span>
+              <div class="gy-radio-row">
+                <label><input type="radio" name="density" value="comfortable" checked><span>راحت</span></label>
+                <label><input type="radio" name="density" value="compact"><span>فشرده</span></label>
+              </div>
+            </div>
+          </section>
+
+          <!-- Data & privacy -->
+          <section class="gy-card gy-set">
+            <div class="gy-set-head">
+              <h3>داده‌ها و حریم خصوصی</h3>
+              <p>مدیریت مدت نگهداری داده‌های افزونه</p>
+            </div>
+            <div class="gy-field">
+              <label class="gy-label">نگهداری تاریخچه بررسی‌ها</label>
+              <select id="keep-months">
+                <option>۳ ماه</option>
+                <option selected>۶ ماه</option>
+                <option>۱۲ ماه</option>
+                <option>۲۴ ماه</option>
+                <option>۳۶ ماه</option>
+              </select>
+            </div>
+            <label class="gy-row-switch">
+              <span>
+                <strong>حذف کامل داده‌ها هنگام حذف افزونه</strong>
+                <small>اگر خاموش باشد، با حذف افزونه تاریخچه و تنظیمات می‌ماند.</small>
+              </span>
+              <span class="gy-switch">
+                <input type="checkbox">
+                <i></i>
+              </span>
+            </label>
+          </section>
+
+          <div class="gy-savebar">
+            <button type="submit" class="gy-btn gy-btn-primary">ذخیره تنظیمات</button>
+          </div>
+        </form>
+
+        <!-- Danger zone -->
+        <form class="gy-card gy-set gy-danger-zone">
+          <div>
+            <h4>پاک کردن نظرهای ذخیره‌شده</h4>
+            <p>
+              متن‌های ذخیره‌شده هوش مصنوعی از داشبورد حذف می‌شود.
+              کلیدها و اتصال‌ها دست‌نخورده می‌ماند.
+            </p>
+          </div>
+          <button type="button" class="gy-btn gy-btn-danger" data-toast="در دمو هیچ داده‌ای حذف نمی‌شود.">پاک کردن</button>
+        </form>
+
+      </section>
+
+      <!-- Toast -->
+      <div class="gy-demo-toast" id="toast" role="status"></div>
 
     </div>
-
-    <script>
-        const menuButton = document.querySelector('.mobile-menu-button');
-        const mainNav = document.querySelector('.main-nav');
-
-        if (menuButton && mainNav) {
-            menuButton.addEventListener('click', function () {
-                const isOpen = mainNav.classList.toggle('nav-open');
-                menuButton.classList.toggle('menu-open', isOpen);
-                menuButton.setAttribute('aria-expanded', String(isOpen));
-            });
-
-            mainNav.querySelectorAll('a').forEach(function (link) {
-                link.addEventListener('click', function () {
-                    mainNav.classList.remove('nav-open');
-                    menuButton.classList.remove('menu-open');
-                    menuButton.setAttribute('aria-expanded', 'false');
-                });
-            });
-        }
-    </script>
-
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
